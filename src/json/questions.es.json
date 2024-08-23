@@ -2,91 +2,91 @@
    {
      "id": "Rule 1",
      "name": "La contraseña debe tener al menos 5 caracteres.",
-     "check": "value.length > 5"
+     "isValid": false
    },
    {
      "id": "Rule 2",
      "name": "Debe contener al menos una letra mayúscula.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 3",
      "name": "Debe contener al menos un número.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 4",
      "name": "Debe contener al menos un carácter especial (como @, #, !, etc.).",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 5",
      "name": "No puede contener letras repetidas consecutivamente.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 6",
      "name": "Debe contener un emoji.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 7",
      "name": "Debe incluir un número primo.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 8",
      "name": "Debe contener la inicial del día de la semana actual (por ejemplo, si hoy es martes, incluir una M).",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 9",
      "name": "Debe incluir un número romano.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 10",
      "name": "Debe contener el nombre de un país que comience con la misma letra que tu primer carácter en la contraseña.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 11",
      "name": "Debe incluir el número de movimientos que necesita una partida de ajedrez para que ocurra el jaque mate en la posición que te muestran.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 12",
      "name": "Debe incluir una URL válida.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 13",
      "name": "Debe contener un color en inglés (por ejemplo, Red, Blue, Green, etc.).",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 14",
      "name": "Debe incluir la fecha actual en formato DD-MM-AAAA o similar.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 15",
      "name": "Debe cumplir con las reglas ortográficas de un idioma específico (como no usar números).",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 16",
      "name": "Debe incluir el nombre de una constelación.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 17",
      "name": "Debe contener una palabra palíndroma.",
-     "check": "value.length > 15"
+     "isValid": false
    },
    {
      "id": "Rule 18",
      "name": "Debe incluir el nombre de un Pokémon.",
-     "check": "value.length > 15"
+     "isValid": false
    }
 ]

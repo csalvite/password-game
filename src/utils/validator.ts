@@ -1,0 +1,21 @@
+export const validators: { [key: string]: (value: string) => boolean } = {
+  'Rule 1': (value: string) => value.length >= 5,
+  'Rule 2': (value: string) => /[A-Z]/.test(value),
+  'Rule 3': (value: string) => /[0-9]/.test(value),
+  'Rule 4': (value: string) =>
+    /[!@#$%^&*()_+\-=[\]{}|;:'",.<>?\\\/]/.test(value),
+  'Rule 5': (value: string) => !/(.)\1/.test(value),
+  'Rule 6': (value: string) => /[A-Z]/.test(value),
+  'Rule 7': (value: string) => /[A-Z]/.test(value),
+  'Rule 8': (value: string) => /[A-Z]/.test(value),
+  'Rule 9': (value: string) => /[A-Z]/.test(value),
+  'Rule 10': (value: string) => /[A-Z]/.test(value),
+  'Rule 11': (value: string) => /[A-Z]/.test(value),
+  'Rule 12': (value: string) => /[A-Z]/.test(value),
+  'Rule 13': (value: string) => /[A-Z]/.test(value),
+  'Rule 14': (value: string) => /[A-Z]/.test(value),
+  'Rule 15': (value: string) => /[A-Z]/.test(value),
+  'Rule 16': (value: string) => /[A-Z]/.test(value),
+  'Rule 17': (value: string) => /[A-Z]/.test(value),
+  'Rule 18': (value: string) => /[A-Z]/.test(value),
+};

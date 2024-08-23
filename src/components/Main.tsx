@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import Loader from './Loader';
 import Card from './Card';
 import { Box, TextField } from '@mui/material';
+import { validators } from '@/utils/validator';
 
 const Main = () => {
   const [questions, setQuestions] = useState<IQuestions[]>([]);
@@ -13,30 +14,36 @@ const Main = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
 
-  const evaluateCondition = (condition: string, value: string) => {
-    // Usa eval para evaluar la condición
-    try {
-      // Se evalúa en un contexto donde `value` es la variable local
-      return eval(condition);
-    } catch (error) {
-      console.error('Error al evaluar la condición:', error);
-      return false;
-    }
-  };
-
   const handleChangePass = (e: any) => {
     const { value } = e.target;
-    console.log('Cambia la contraseña por: ', value);
 
-    const correct = questions.filter((question) => {
-      if (question.check) {
-        // Evaluar la condición con la contraseña actual
-        return evaluateCondition(question.check, value);
+    const result = [];
+    let foundInvalid = false;
+
+    for (let i = 0; i < questions.length; i++) {
+      const question = questions[i];
+      const validator = validators[question.id];
+
+      if (!foundInvalid && validator(value)) {
+        // Si es válida y aún no se ha encontrado ninguna invalida, añadirla como válida
+        result.push({
+          ...question,
+          isValid: true,
+        });
+      } else if (!foundInvalid) {
+        // Si no es válida y es la primera que falla, añadirla como inválida
+        result.push({
+          ...question,
+          isValid: false,
+        });
+        foundInvalid = true; // Marcar que ya hemos encontrado la primera inválida
+      } else {
+        // Si ya hemos encontrado una inválida, detener la validación
+        break;
       }
-      return false;
-    });
+    }
 
-    setCorrectQuestions(correct);
+    setCorrectQuestions(result.reverse());
   };
 
   useEffect(() => {
@@ -55,8 +62,6 @@ const Main = () => {
 
     getQ();
   }, []);
-
-  console.log('correct questions: ', correctQuestions);
 
   const render = () => {
     if (loading) {
@@ -91,7 +96,7 @@ const Main = () => {
                 key={item.id}
                 className='w-full md:w-[35rem] md:w-[40rem]'
               >
-                <Card title={item.id} text={item.name} isValid={true} />
+                <Card title={item.id} text={item.name} isValid={item.isValid} />
               </article>
             ))}
         </section>
