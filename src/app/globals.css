@@ -2,7 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'MyFont';
+  src: url('/fonts/TT Norms Pro Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('/fonts/TT Norms Pro Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('/fonts/TT Norms Pro Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
+  --color1: #43464a;
+  --color2: #a3c1de;
+  --color3: #bdd6e9;
+  --color4: #d6eaf4;
+  --color5: #efffff;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -17,17 +49,14 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* background-color: var(--color1); */
+  color: var(--color5);
+  font-family: 'MyFont', sans-serif;
+  min-height: 100vh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Fuente para que Font Awesome use su fuente específica */
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
 }

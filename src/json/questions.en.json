@@ -1,0 +1,74 @@
+[
+   {
+     "id": "Rule 1",
+     "name": "The password must be at least 5 characters long."
+   },
+   {
+     "id": "Rule 2",
+     "name": "Must contain at least one uppercase letter."
+   },
+   {
+     "id": "Rule 3",
+     "name": "Must contain at least one number."
+   },
+   {
+     "id": "Rule 4",
+     "name": "Must contain at least one special character (such as @, #, !, etc.)."
+   },
+   {
+     "id": "Rule 5",
+     "name": "Cannot contain consecutive repeated letters."
+   },
+   {
+     "id": "Rule 6",
+     "name": "Must contain an emoji."
+   },
+   {
+     "id": "Rule 7",
+     "name": "Must include a prime number."
+   },
+   {
+     "id": "Rule 8",
+     "name": "Must contain the initial of the current day of the week (e.g., if today is Tuesday, include a T)."
+   },
+   {
+     "id": "Rule 9",
+     "name": "Must include a Roman numeral."
+   },
+   {
+     "id": "Rule 10",
+     "name": "Must contain the name of a country that starts with the same letter as the first character in your password."
+   },
+   {
+     "id": "Rule 11",
+     "name": "Must include the number of moves needed for checkmate in the given chess position."
+   },
+   {
+     "id": "Rule 12",
+     "name": "Must include a valid URL."
+   },
+   {
+     "id": "Rule 13",
+     "name": "Must contain a color in English (e.g., Red, Blue, Green, etc.)."
+   },
+   {
+     "id": "Rule 14",
+     "name": "Must include the current date in DD-MM-YYYY format or similar."
+   },
+   {
+     "id": "Rule 15",
+     "name": "Must follow the spelling rules of a specific language (such as not using numbers)."
+   },
+   {
+     "id": "Rule 16",
+     "name": "Must include the name of a constellation."
+   },
+   {
+     "id": "Rule 17",
+     "name": "Must contain a palindrome word."
+   },
+   {
+     "id": "Rule 18",
+     "name": "Must include the name of a Pokémon."
+   }
+]
